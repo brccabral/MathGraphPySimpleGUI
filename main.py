@@ -21,4 +21,11 @@ while True:
     if event == sg.WIN_CLOSED:
         break
 
+    if event == "-SUBMIT-":
+        new_value: str = values["-INPUT-"]
+        if new_value.isnumeric():
+            table_content.append([len(table_content) + 1, float(new_value)])
+            window["-TABLE-"].update(table_content)
+            window["-INPUT-"].update("")
+
 window.close()
