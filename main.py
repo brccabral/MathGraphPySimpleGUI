@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+sg.theme("DarkTeal6")
 table_content = []
 layout = [
     [
